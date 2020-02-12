@@ -1,0 +1,73 @@
+Circuitos Digitais
+
+Javier Ropero Pelaez
+laboratórios 405-1 e 407-1
+
+Nota da prova
+precisa ter 3 questionários aprovados do lab
+entrega relatório junto com a prova
+
+Prova 27/04
+Rec e sub 07/05
+Rec da sub 12/05
+
+nota da rec = média
+
+Aula 1:
+
+    Projeto:
+        Sistema para controlar 2 semáforos
+        sensor na via secundária para detectar se existe um carro
+        prioridade à via principal
+        if secundária vazia, abre principal
+
+    Grandezas analógicas
+        conversão analógico > digital
+        TTL: 
+            0 até 0,8V >>>0
+            2 até 5V >>>1
+    Tempo de bit:
+        Intervalo do relógio, tempo a tempo
+    
+    Onda periódica - ondas simétricas
+    Ondas não periódicas - não simétricas
+
+    Ciclo de trabalho: tw/T
+        tw = onda de cima
+        T = período completo
+
+    Código binário > decimal
+    0000 - 1
+    0001 - 2
+    0010 - 3
+    0011 - 4
+    0100 - 5
+    0101 - 6
+
+    Código gray:
+        somente um bit muda por vez
+        não pode mudar mais de um bit por vez, há uma chance de um falso código aparecer na transição 01 para 10, sentindo os dois zeros antes de transicionar por completo
+            código gray de 3 bits:
+                000
+                001
+                011
+                010
+                110
+                111
+                101
+                100
+    
+    Revisão resistores e capacitores:
+        Resistor: dispositivo que impede a passagem da eletricidade não seja tão eficiente.
+        divisor de tensão, lei de ohm
+        I = V/R
+
+    Capacitores:
+        cargas positivas de um lado
+        cargas negativas do outro
+        cuidado para não explodir o capacitor eletrolítico
+        equações de carga de um capacitor
+        Voltagem n pode mudar abruptamente
+        Diferença entre as placas dos capacitores SEMPRE é zero.
+        depois de zerar, a voltagem sobe lentamente para voltar a voltagem anterior.
+        
