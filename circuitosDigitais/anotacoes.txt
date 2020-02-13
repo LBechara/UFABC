@@ -70,4 +70,66 @@ Aula 1:
         Voltagem n pode mudar abruptamente
         Diferença entre as placas dos capacitores SEMPRE é zero.
         depois de zerar, a voltagem sobe lentamente para voltar a voltagem anterior.
+        capacitor carrega e descarrega, ele oscila e usaremos essa oscilação.
         
+    Semi condutores(diodo):
+        faixa do lado do catodo (negativo)
+
+        LED:
+            é um diodo
+            prestar atenção no positivo e negativo
+            lado com chanfro é negativo
+            anodo perna mais curta e catodo perna mais cumprida(quando não chineses falsetas)
+
+            colocar resistor para não queimar os diodos
+            http://led.linear1.org/1led.wiz
+
+            V=R.I (calcular resistor)
+            V(bateria) = V(LED) + I.R
+
+            R = (V(bateria) - V(LED))/I
+
+        Transistor npn:
+            coloca uma carga de 5V e faz a corrente fechar, passando a energia
+            interruptor
+            o mínimo Vbase é de 0,7V
+
+        Amplificador operacional:
+            coloca uma voltagem na entrada e ganha uma voltagem na saída
+            não usaremos para amplificar, usaremos como comparador
+
+            if V+ > Vref : Vsaída = Vcc = 5V
+            else Vsaída(ou V0) = 0
+
+        Latch S-R:
+            Set e reset, botões do guindaste, aperta o set ele continua ligado até o reset ser apertado.
+            funciona como o amplificador operacional
+            compara as voltagens de set e reset, se reset for > que set, a corrente vira 0V
+        
+        Latch ativado em nível baixo vai cair na prova!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            Para ativar a corrente de 5V, é necessário colocar 0v no Set
+            Para desativar a corrente, 0v no reset
+    
+    Circuito integrado monolítico:
+        Chip, case de plastico e pins, numerados no sentido anti-horário a partir da bolinha
+        Vcc acima a direita e Ground abaixo a esquerda, semi-círculo acima
+        metade de um lado da fenda da protoboard e metade para o outro lado
+
+    Chip 555:
+        "coração do chip"
+        Oscila em em determinado tempo
+
+
+
+    Liga o amplificador operacional
+    Passa corrente pra ele, corrente ativa e começa a carregar o capacitor
+    com o transistor faz um curto na corrente e começa a descarregar o capacitor
+    Latch para ligar e desligar o transistor
+    sobe para 10/3V, descarrega, chega em 5/3V carrega de novo. Isso em looping para criar a oscilação
+    porta not + resistor + capacitor = onda quadrada
+
+    possíveis erros:
+        esquecer de alimentar o chip
+        conexão errada no protoboard
+        multiplicador, última
+        led queimar
