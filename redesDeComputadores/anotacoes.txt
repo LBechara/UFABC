@@ -1,7 +1,111 @@
 Redes de Computadores
+https://sites.google.com/site/carlokleber/redes-computadores
 
 Prof Carlo Kleber
 
 ns-3 simulator
 P1 04/03
 P2 01/04
+
+Conceitos e fundamentos:
+
+    camadas tcp/ip:
+        aplicação -
+        transporte -
+        rede - IP
+        enlace - pacote de dados
+        física -
+    
+    Requisitos de aplicações de rede:
+        Desempenho:
+            Latência - tempo entre operação de envio e chegada ao destino(tempo para a informação chegar do outro lado da rede)
+            depende do meio de comunicação - cabo
+
+            Taxa de transferência - velocidade de transferência dos bits(100mbps) por exemplo
+
+            Tempo de transferência = latência + (tam da msg/tx de transf)
+
+        Confiabilidade:
+            Garantir imunidade a falhas e capacidade de recuperação
+
+        Segurança:
+            proteção de ataques externos e controle de acesso
+
+        Confidencialidade:(pode ser tratado no escopo de segurança)
+            não estar disponível sem autorização
+
+        Mobilidade:
+            dispositivos móveis serem capazes de serem reconectados em diferentes pontos da rede
+
+            permitir conexão enquanto em movimento
+
+        Qualidade de serviço:
+            satisfação do cliente é relativa
+            atender prazos finais
+
+    Aspectos de projeto:
+        Hardware
+        
+        Software
+        
+        Heterogeneidade - redes conversando entre si, rede lógica(interligar redes incompatíveis) e rede física(atender demandas específicas)
+        
+        Tecnologias de enlace - redes locais(conexão multiponto), redes de longa distância(conexão ponto a ponto)
+            conexões multiponto: possivelmente necessário tratar colisão de informações
+        
+            exemplos tecnologias de enlace:
+                ethernet
+                wi-fi
+                bluetooh
+                frame relay
+                wi-max
+        
+        Topologia física:
+            Estrela - varias redes centralizadas em um ponto
+
+            Anel - computadores ligados formando um Anel
+
+            Barra - pcs ligados em uma Barra
+
+            Grafo
+
+        Abrangência geográfica:
+
+            PAN - rede de pequena dimensão, raio limitado de 10 metros(bluetooth)
+
+            LAN - maior alcance, em media 100 metros(computadores em aeroportos, restaurantes, etc)
+
+            MAN - tamanho médio raio de mais ou menos 50 quilômetros(ligação de redes LAN. Exemplo: Wi-Max)
+
+            WAN - grande abrangência, alcance mundial(interligação de redes MAN ou LAN. Exemplo: Frame relay)
+
+    Comutação de circuitos e pacotes:
+        
+        circuitos: chaveamentos mecânicos, circuitos físicos(mais veloz)
+            FDM: frequência
+
+            TDM: tempo
+        
+        pacotes: coloca os dados em pacotes e eles são transferidos a partir do cabo, se congestionam eles atuam em filas(melhor troca de informação mas podem haver filas)
+
+            redes de CVs(circuitos virtuais): pacotes de dados marcados com números, correspondentes ao circuito
+
+            redes de datagramas: pacote com endereço de destino, chega ao roteador e o roteador encaminha de algum jeito, pode transferir por caminhos diferentes.
+
+    Redes convergentes: uma rede só capas de lidar com vários tipos de informação
+
+        exemplos: IPTV, Voip, video on demand, mobile-web.
+
+    Redes com fio e sem fio:
+
+        com fio: informação vai por meios guiados(cabos), componentes são estáticos(cabos limitam mobilidade)
+
+        sem fio: meios não guiados(ar), o objeto que se comunica pode ser estável ou móvel
+
+            sem fio móvel:
+                infraestruturada - infra fixa(torres, roteadores, antenas, etc).
+                sem infraestrutura - rede sem fio que os nós se movimentam, os elementos conectados recebem e transmitem informação(MANET. exemplo: drones se comunicando entre si)
+
+    Comunicação através de enlaces sem fio MUITO MAIS DIFÍCIL.
+
+    
