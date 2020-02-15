@@ -40,7 +40,7 @@ Conceitos e fundamentos:
             permitir conexão enquanto em movimento
 
         Qualidade de serviço:
-            satisfação do cliente é relativa
+            satisfação do cliente, é relativa
             atender prazos finais
 
     Aspectos de projeto:
