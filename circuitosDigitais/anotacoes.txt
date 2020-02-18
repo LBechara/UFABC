@@ -131,5 +131,45 @@ Aula 1:
     possíveis erros:
         esquecer de alimentar o chip
         conexão errada no protoboard
-        multiplicador, última
+        multiplicador, última faixa
         led queimar
+
+Aula 2:
+
+    Algebra booleana
+        Operações lógicas(OR, AND e NOT)
+
+        AND
+        F F - F
+        V F - F
+        F V - F
+        V V - V
+
+        vai cair na prova!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        Wired AND com diodos
+            mesma lógica da porta lógica AND
+            todas as entradas do Wire devem ser 1 ou 5V, para que a corrente passagem
+            quando os dois ficam em 0V, é como se tivesse em curto circuito
+
+        OR
+        F F - F
+        V F - V
+        F V - V
+        V V - V
+        vai cair na prova!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        Wired OR
+
+        https://en.wikipedia.org/wiki/Wired_logic_connection
+
+        NOT
+        F - V
+        V - F
+
+        Porta NOT com histerese: simbolo dentro do triângulo
+            dois lineares de operação
+            quando V está abaixo do linear inferior, saída é 5V
+            quando V ultrapassa linear e está entre inferior e superior, saída continua 5V
+            quando V passar linear superior, saída é 0v
+            e o mesmo se repete até atingir novamente o nivel inferior de operação
+            ajuda a estabilizar a voltagem atual, não permitindo mts variações abruptas
+
