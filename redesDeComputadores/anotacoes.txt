@@ -108,4 +108,95 @@ Conceitos e fundamentos:
 
     Comunicação através de enlaces sem fio MUITO MAIS DIFÍCIL.
 
+
+Internet:
+
+    Definição:
+        Uma rede composta por um grande número de redes de tamanhos e estruturas diferentes.
     
+    Modelo em camadas:
+        Hierarquia de camadas que conversam entre si, oferecendo serviços umas às outras.
+        As camadas se conversam somente entre as cadamas adjacentes, não pulando a hierarquia.
+
+        Serviço orientado a conexão:
+            estabelece a conexão, utiliza e depois libera
+            Pode haver uma negociação sobre os parâmetros.(exemplo: tamanho da msg, qualidade do serviço)
+            É organizado, precisa de um diálogo entre as partes conectadas e a informação caminha em sequência
+        Serviço sem conexão:
+            Não caminha em sequência, uma parte pode chegar antes da primeira enviada.
+
+    Modelo ISO/OSI:
+        Não diz o protocolo que deve usar, mas diz o que esse protocolo deve fazer.
+        Muito genérico.
+        Possui 7 camadas e as camadas tem funções bem definidas que fazem tudo o que precisam e não dependem de outras camadas.
+        Modelo possui baixo acoplamento
+        Camadas:
+            Aplicação
+            Apresentação
+            Sessão
+            Transporte
+            Rede
+            Enlace de dados
+            Física
+
+    Modelo TCP/IP:
+        Possui 5 Camadas.
+            Aplicação - HTTP, FTP, SMTP
+                Disponibilizar o serviço de comunicação
+            Transporte - TCP, UDP
+                Controlar comunicação fim-a-fim
+            Rede - IP, PSPF, ICMP
+                Oferecer identificação lógica e independente de hardware
+            Enlace - Ethernet
+                Compatibilizar meio lógico p/ mandar p/ a rede física
+                Controle de colisões de informação
+            Física - RS-232(cabos e ar)
+                Refere-se aos circuitos e hardware
+        Baixo acoplamento, alta coesão, não tem dependência de camadas.
+        Define quais protocolos utilizar.
+
+
+    Diferença entre OSI e TCP/IP:
+        Modelo TCP/IP especifíca os serviços, especifíca quais protocolos se deve usar.
+
+    Tipos de aplicações:
+        Desenvolver programas que rodam em sistemas finais, máquinas, celulares e etc.
+        P2P:
+            Não há um servidor sempre funcionando, há descentralização de host.
+            Escalabilidade muito alta
+            Difícil gerenciar aplicações P2P
+        
+    Comunicação em redes:
+        São processos(instância de um programa) que se comunicam entre si
+        Arquitetura TCP/IP
+        Se há um servidor aberto, quem se conecta a ele é o cliente.
+        Socket:
+            Porta de entrada e saída da comunicação
+            Identificação do socket: IP e Porta do destino.
+        Um processo pode ter n portas mas 1 porta somente pode ter um processo.
+        
+
+    Protocolo da Camada de Aplicação:
+        O protocolo é somente um pedaço da aplicação
+        
+    Protocolos da Camada de Transporte:
+        TCP - orientado a conexão
+            Informações chegam em ordem, organizadas.
+            Dialoga com o destinatário.
+        UDP - sem conexão
+            Não garante que a informação irá chegar em ordem.
+            Não conversa com o destinatário.
+
+    Desenvolvimento de aplicações:
+        TCP:
+            Comunicação cliente servidor se da como se houvesse uma tubuluação entre os dois processos.
+            A tubulação se mantém entre os processos, até o encerramento.
+            Os dados são inseridos nessa tubulação pelos processos
+            Não precisa de destino, pois a tubulação ja contém essas informações de conexão
+            Canal confiável de fluxo de dados
+        UDP:
+            Socket UDP é identificado por 2 valores:
+                IP destino e número da porta destino
+            Não há apresentação inicial, certificação do caminhos
+            O processo anexa no conjunto de bytes a informação
+            Isso deve ser feito para cada conjunto de bytes.

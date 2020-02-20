@@ -1,0 +1,5 @@
+Ligamos o CI 74HC14 na protoboard, depois ligamos a alimentação de 5V no pino 14 do CI e ligamos o terra no pino 7, para criar uma corrente na CI.
+
+Ligamos o capacitor de 3,3 microfarades no terra e no pino 1, e utilizamos o resistor de 1,8 Mohms ligando o pino 1 ao pino 2.
+
+do pino 2 ligamos uma alimentação até o led e do led ao terra utilizamos um resistor de 330ohms
