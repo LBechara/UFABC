@@ -200,3 +200,57 @@ Internet:
             Não há apresentação inicial, certificação do caminhos
             O processo anexa no conjunto de bytes a informação
             Isso deve ser feito para cada conjunto de bytes.
+
+Roteamento:
+
+    Conceitos preliminares:
+        Na camada de Rede, pode-se utilizar datagramas ou circuitos virtuais
+        Por datagramas:(ATM, Frame Relay)
+            o roteamento é sob demanda, não necessariamente seguem a mesma roteador
+        Por circuitos digitais:(internet)
+            é criada uma sessão para atender o tráfego, é fechada uma rota e todos os pacotes seguem o mesmo caminhos
+        
+        2 processos do roteador:
+            Roteamento: decisão de rota
+            Encaminhamento: o que fazer quando pacote chega ao roteador, qual a porta de saída.
+        
+        Prioridade dos Algoritmos de roteamento:
+            Correção e simplicidade
+            Robustez
+            Estabilidade
+            Justiça e eficiência
+        
+        Algoritmos de roteamento:
+            Adaptativo(dinânico)
+            Não adaptativo(dinâmico)
+
+        
+    Princípio da otimalidade:****************************************************************************************************************************
+        Se há caminhos bons na rota, eles 
+    Abordagem centralizada:
+        Cada nó é rotulado com infinito, do ponto de origem, começam a ser calculadas as rotas, e sendo rotuladas com os novos valores, avaliando o peso de cada rota
+    Abordagem distribuída:
+        técnica de inundação, envia os pacotes para todas as portas
+        2 métodos para controlar essa técnica:
+            contador de saltos:
+                contador de saltos no eader do pacote, decrementa a cada salto, para evitar mts envios
+            número de sequência:
+                coloca número de sequência para os pacotes e o roteador verifica se ja enviou esse pacote ou não
+    Algoritmos dinâmicos: cai na prova!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! slide 28 aula 3
+        Roteamento com Vetor de Distância:
+            estudar slide 28
+        Roteamento por Estado de Enlace:
+            5 passos:
+                Descobrir os vizinhos
+                Estabelecer o retardo
+                Criar um pacote ara informar os vizinhos
+                Enviar e receber os pacotes p vizinhos
+                calcular caminho mais curto(algoritmo de dijkstra)
+    Roteamento hierárquico:
+        Separar os roteadores por região para diminuir a quantidade de entradas para cada roteador.
+        Cada grupo tem um roteador central que transmite para outros grupos.
+    Roteamento para k destinos:
+    Hosts móveis:
+    Redes ad hoc:
+
+
