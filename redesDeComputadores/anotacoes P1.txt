@@ -250,7 +250,56 @@ Roteamento:
         Separar os roteadores por região para diminuir a quantidade de entradas para cada roteador.
         Cada grupo tem um roteador central que transmite para outros grupos.
     Roteamento para k destinos:
-    Hosts móveis:
-    Redes ad hoc:
+        Unicast:
+            Uma origem, um destino
+        Broadcast:
+            Uma origem e vários destinos(exemplo: televisão)
+            método 1: 
+                Desperdiça banda e é lento, envia um pacote para cada destino
+            método 2: Roteamento multidestino
+                Cada pacote tem uma lista de endereços, só envia para os vizinhos, e os mesmos repassam
+            método 3: Reverse Path Forwarding
+                O vizinho analisa se o pacote chegou pela rota ótima, caso tenha chegado ele envia o pacote para os vizinhos
+            método 4: Spanning tree(Árvore geradora)
+                Analisa a rede e cria uma árvore ligando os possíveis destinatários e envia através dessa árvore
+                problema: conhecer a árvore
+        Multicast:
+            Grupo de destinatário
+            grupo selecionado para quem se deve enviar, por exemplo: jogos ou netflix, envia para quem paga.
+            exigem formas de criar e destruir grupos
+            Protocolo IGPM: Gerencia grupos para funcionamento do Multicast
 
+            Funcionamento do Multicast:
+                Baseia-se em Broadcast
+                envia pacotes através da árvore geradora para alcanças os membros
+                Group-shared tree: uma árvore distribuindo o tráfego
+                Source-based three: uma árvore para cada emissor
+            
+            Grupo denso: Source-based tree
+                Constrói a árvore e depois poda os host não pertencentes ao grupo
+                método de poda 1: 
+                    varre toda a árvore e elimina os hosts não pertencentes.
+                método de poda 2:
+                    ***************************************************************************************************************************************
+            Grupo esparso: Group-Shared tree
+                define-se um núcleo para receber o pacote dos hosts pertencentes ao grupo.
+                Cada participante do grupo envia um pacote para o núcleo e a árvore é montada a partir disso
+                pontos negativos: 
+                    utilizar os mesmos caminhos pode engargalar
+                    nem sempre utiliza os caminhos ótimos
+        Anycast:
+            Envia ao mais conveniente do grupo, ao que esteja em melhor situação para receber(n motivos)
+            pacote é entregue ao membro mais próximo.
+            (bancos de dados replicados)
+    Hosts móveis:
+        existe um endereço de origem do dispositivo, o dispositivo informa ao endereço de origem o ip que ele se encontra no momento, o remetente consulta o endereço origem, que informa agora o endereço atual do dispositivo, o remetente então cria uma conexão com o dispositivo através do novo endereço.
+        *********************************************************************************************************************************************************************************************
+    Redes ad hoc:
+        Hosts e roteadores são móveis
+        comunicação é sem fio e o nó atua simultaneamente
+        redes independentes e não há infraestrutura física
+        Algortitmo de roteamento AODV(Ad Hoc On-demand Distance Vector).
+        procura um nó, caso não ache, executa um algoritmo(on demand) e envia para todos no alcance, até encontrar o nó
+        on demand: só executa sob demanda
+        table-driven: manutenção permanente
 

@@ -1,0 +1,24 @@
+Interconexão:
+    Por que interconectar:
+        Permitir que usuários de redes distintas se conversem
+        há problemas de heterogeneidade e escalabilidade
+    Diferenças:
+        Principais dificuldades na camada de rede
+    Como interconectar:
+        Deve-se considerar o hardware e uma camada comum lógica para compatibilizar as diferenças nas redes
+        Hardware:
+            Repetidores e hubs(camada física) - mais rápido
+                não são inteligentes, apenas ligam ponto a ponto
+            Pontes e switches(enlace)
+                mais inteligentes que hubs, interconectam algumas redes, capacidade de processar e distribuir informação
+            Roteadores(camada de rede) - menos rápido
+                mais inteligente que todos, processam de forma inteligente os pacotes que chegam até ele e descobrem onde estão os destinos
+            cada um atua em uma camada distinta, dividindo as tarefas.
+        Camada comum lógica:
+            protocolo IP, base da internet
+    Roteador e Switches/Pontes:
+    Roteador Multiprotocolo:
+    Tunelamento:
+    Roteamento entre redes:
+    Fragmentação:
+    Projeto Internet:
